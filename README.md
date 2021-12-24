@@ -46,3 +46,42 @@ Dopo un riavvio, è possibile ottenere informazioni sulla velocitá della ventol
 ```bash
 python3 $HOME/x735-v2.5/read_fan_speed.py
 ```
+
+## Procedura per Python3 + Debian Bullseye/Debian 11
+Repository GitHub: [thorkseng](https://github.com/thorkseng/x735-v2.5)
+
+### Installazione
+Questi script sono stati testati su Raspberry Pi OS Bullseye. Sono stati aggiornati, rispetto agli script originali, per poter utilizzare Python3
+```bash
+sudo apt install python3 python3-smbus python3-pigpio
+sudo apt install pigpio
+sudo apt install git
+git clone https://github.com/thorkseng/x735-v2.5/
+cd x735-v2.5
+sudo chmod +x *.sh
+sudo bash install.sh
+sudo reboot
+```
+
+### Installazione del servizio
+Lo script shell ```install_service.sh```
+1. crea un nuovo servizio nella cartella ```/etc/systemd/system/``` con il nome ```x735fan.service```
+2. Lo abilita, lo attiva e controlla che sia in esecuzione.
+   In tal caso, l'esecuzione dello script python sará rimosso dal file ```.bashrc```
+   
+Basterá eseguire lo script:
+'''bash
+bash $HOME/x735-v2.5/install_service.sh
+```
+
+### Utilizzo
+Per attivare manualmente la ventola, eseguire il comando seguente:
+```bash
+python3 $HOME/x735-v2.5/pwm_fan_control.py
+```
+Il comando viene aggiunto, in background, anche nel file ```.bashrc``` del profilo dell'utente.
+
+Per leggere la velocitá della ventola, eseguire il comando
+```bash
+python3 $HOME/x735-v2.5/read_fan_speed.py
+```
