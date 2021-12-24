@@ -70,7 +70,7 @@ Lo script shell ```install_service.sh```
    In tal caso, l'esecuzione dello script python sará rimosso dal file ```.bashrc```
    
 Basterá eseguire lo script:
-'''bash
+```bash
 bash $HOME/x735-v2.5/install_service.sh
 ```
 
