@@ -44,5 +44,5 @@ Questo comando aggiunge una riga in fondo al file ```.bashrc```. In questo modo,
 
 Dopo un riavvio, è possibile ottenere informazioni sulla velocitá della ventola lanciando il comando
 ```bash
-python $HOME/x735-v2.5/read_fan_speed.py
+python3 $HOME/x735-v2.5/read_fan_speed.py
 ```
