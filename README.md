@@ -71,7 +71,7 @@ Lo script shell ```install_service.sh```
    
 Basterá eseguire lo script:
 ```bash
-bash $HOME/x735-v2.5/install_service.sh
+sudo bash $HOME/x735-v2.5/install_service.sh
 ```
 
 ### Utilizzo
